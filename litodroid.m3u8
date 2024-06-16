@@ -1,0 +1,5 @@
+#EXTM3U
+
+
+#EXTINF:-1 tvg-id="" tvg-name="CANAL1" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/6/63/Repretel_2_CDR.png" group-title="PREMIUN",CANAL1
+https://live.obslivestream.com/supercanal/tracks-v1a1/mono.m3u8
