@@ -1,10 +1,3 @@
 #EXTM3U
-
-#EXTINF:-1 tvg-logo="https://i.imgur.com/lE9c256.jpg" group-title="About", PELICULA | Latino
-https://live.obslivestream.com/supercanal/tracks-v1a1/mono.m3u8
-
-#EXTINF:-1 tvg-logo="https://i.imgur.com/lE9c256.jpg" group-title="About", MUSICA | Latino
-https://mi.godo.net.pe/BesTv-001120zx/tracks-v1a1/mono.m3u8
-
-#EXTINF:-1 tvg-logo="https://i.imgur.com/lE9c256.jpg" group-title="About", CANALR ARG | Latino
-http://panel.dattalive.com:1935/8250/8250/.m3u8
+#EXTINF:-1 tvg-id="bbc_news" tvg-name="BBC News" tvg-logo="https://example.com/bbc_logo.png" group-title="News",BBC News
+https://redirector.rudo.video/hls-video/567ffde3fa319fadf3419efda25619456231dfea/latina/latina.smil/playlist.m3u8
