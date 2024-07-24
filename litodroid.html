@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista IPTV en JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        .channel-list {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+        }
+        .channel {
+            margin-bottom: 10px;
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        .channel:last-child {
+            border-bottom: none;
+        }
+        .channel-name {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .channel-details {
+            color: #666;
+        }
+        .channel-logo {
+            max-width: 100px;
+            max-height: 60px;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <div class="channel-list" id="channelList">
+        <!-- Canales se añadirán aquí dinámicamente con JavaScript -->
+    </div>
+
+    <script>
+        // Datos de ejemplo de canales IPTV
+        const iptvChannels = [
+            { name: 'BBC News', logo: 'https://example.com/bbc_logo.png', url: 'https://redirector.rudo.video/hls-video/567ffde3fa319fadf3419efda25619456231dfea/latina/latina.smil/playlist.m3u8' },
+            { name: 'CNN', logo: 'https://example.com/cnn_logo.png', url: 'http://example.com/cnn/stream.m3u8' },
+            { name: 'Discovery Channel', logo: 'https://example.com/discovery_logo.png', url: 'http://example.com/discovery/stream.m3u8' },
+            { name: 'ESPN', logo: 'https://example.com/espn_logo.png', url: 'http://example.com/espn/stream.m3u8' },
+            { name: 'Fox News', logo: 'https://example.com/fox_logo.png', url: 'http://example.com/fox_news/stream.m3u8' },
+            { name: 'National Geographic', logo: 'https://example.com/nat_geo_logo.png', url: 'http://example.com/nat_geo/stream.m3u8' }
+        ];
+
+        // Función para renderizar la lista de canales
+        function renderChannelList() {
+            const channelList = document.getElementById('channelList');
+
+            iptvChannels.forEach(channel => {
+                const channelDiv = document.createElement('div');
+                channelDiv.classList.add('channel');
+
+                const logoImg = document.createElement('img');
+                logoImg.classList.add('channel-logo');
+                logoImg.src = channel.logo;
+                logoImg.alt = `${channel.name} Logo`;
+
+                const nameDiv = document.createElement('div');
+                nameDiv.classList.add('channel-name');
+                nameDiv.textContent = channel.name;
+
+                const detailsDiv = document.createElement('div');
+                detailsDiv.classList.add('channel-details');
+                detailsDiv.innerHTML = `Watch <a href="${channel.url}" target="_blank">${channel.name}</a>`;
+
+                channelDiv.appendChild(logoImg);
+                channelDiv.appendChild(nameDiv);
+                channelDiv.appendChild(detailsDiv);
+
+                channelList.appendChild(channelDiv);
+            });
+        }
+
+        // Llamar a la función para renderizar la lista al cargar la página
+        document.addEventListener('DOMContentLoaded', renderChannelList);
+    </script>
+</body>
+</html>
