@@ -1,5 +1,8 @@
 #EXTM3U
+#PLAYLIST:Lito TV
+
 #EXTINF:-1 tvg-id="Cartoon Network (720p)",Cartoon Network (720p)
 https://envivo.cncity.live/hls/envivo.m3u8
+
 #EXTINF:-1 tvg-id="Los Pitufos 24-7 (720p)",Los Pitufos 24-7 (720p)
 https://imps-smrfs.otteravision.com/imps/smrfs/smrfs_720.m3u8
